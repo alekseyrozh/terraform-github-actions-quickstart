@@ -103,7 +103,7 @@ terraform apply
 - set `ROLE_TO_ASSUME` to the arn that terraform apply output gave you in step 6 (or step 9)
 - set `AWS_REGION` to the region that you set for terraform backend in `./main.tf`
 
-11. Commit your code to `master`, add remote repository, and push to `master`
+11. Commit your code to `master`, add your repository as remote, and push to `master`
 
 This step will push your code to the repo and in `Actions` tab on github you will see 2 github action appear
 
@@ -113,6 +113,7 @@ Note that repository name and org should match what you specified in `./terrafor
 git add .
 git commit -m "setup remote state and gh actions"
 
+git remote remove origin
 git remote add origin git@github.com:<YOUR_GITHUB_ORG or USERNAME>/<YOUR_GITHUB_REPO>.git
 git push --set-upstream origin master
 ```
